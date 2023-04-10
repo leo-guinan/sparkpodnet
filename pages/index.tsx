@@ -66,6 +66,7 @@ export const getStaticProps: GetStaticProps = async () => {
     settings = await getAllSettings()
     posts = await getAllPosts()
   } catch (error) {
+    console.error(error)
     throw new Error('Index creation failed.')
   }
 
